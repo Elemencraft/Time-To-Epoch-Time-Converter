@@ -4,7 +4,6 @@
 <title>Epoch Time Converter</title>
 </head>
 <body onload="get_time()">
-  <h1 id="time"></h1>
   <script>
     function GetURLParameter(sParam){
         var sPageURL = window.location.search.substring(1);
@@ -22,7 +21,9 @@
       var time = GetURLParameter("time");
       var someDate = new Date(time);
       someDate = Math.floor(Number(someDate) / 1000);
-      document.getElementById("time").innerHTML = someDate;
+      var ans = "&ans" + someDate.toString();
+      var url = window.location.href + ans;
+      window.location = url;
     }
   </script>
 </body>
