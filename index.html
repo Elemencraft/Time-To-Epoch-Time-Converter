@@ -18,12 +18,16 @@
         }
     }
     function get_time(){
-      var time = GetURLParameter("time");
-      var someDate = new Date(time);
-      someDate = Math.floor(Number(someDate) / 1000);
-      var ans = "&ans" + someDate.toString();
-      var url = window.location.href + ans;
-      window.location = url;
+      url1=window.location.href
+      if(url1.includes("&ans")){}
+      else{
+          var time = GetURLParameter("time");
+          var someDate = new Date(time);
+          someDate = Math.floor(Number(someDate) / 1000);
+          var ans = "&ans" + someDate.toString();
+          var url = window.location.href + ans;
+          window.location = url;
+      }
     }
     get_time()
   </script>
