@@ -5,6 +5,7 @@
   <script>
     function get_time(){
       var time = GetURLParameter('time');
+      document.getElementById("gtime").innerHTML = time;
       var someDate = new Date(time);
       someDate = Math.floor(Number(someDate) / 1000);
       document.getElementById("time").innerHTML = someDate;
@@ -26,5 +27,6 @@
 </head>
 <body>
   <h1 id="time"></h1>
+  <h1 id="gtime"></h1>
 </body>
 </html>
