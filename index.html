@@ -17,6 +17,9 @@
             }
         }
     }
+    function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+    }
     function get_time(){
       url1=window.location.href
       if(url1.includes("ans")){return;}
@@ -26,6 +29,7 @@
           someDate = Math.floor(Number(someDate) / 1000);
           var ans = "https://elemencraft.github.io/timepass/?ans=" + someDate.toString();
           var url = ans;
+          await sleep(2000);
           window.location.href = url;
       }
     }
