@@ -4,7 +4,7 @@
 <title>Epoch Time Converter</title>
   <script>
     function get_time(){
-      var time = GetURLParameter('time');
+      var time = GetURLParameter();
       document.getElementById("gtime").innerHTML = time;
       var someDate = new Date(time);
       someDate = Math.floor(Number(someDate) / 1000);
@@ -12,21 +12,14 @@
     }
     function GetURLParameter(sParam)
     {
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++) 
-        {
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam) 
-            {
-                return sParameterName[1];
-            }
-        }
+        var data = window.location.href;
+        document.getElementById("url").innerHTML = data;
     }
   </script>
 </head>
 <body>
   <h1 id="time"></h1>
   <h1 id="gtime"></h1>
+  <h1 id="url"></h1>
 </body>
 </html>
