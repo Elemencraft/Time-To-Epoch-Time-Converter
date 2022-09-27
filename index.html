@@ -24,7 +24,7 @@
       var time = GetURLParameter("time");
       document.getElementById("gtime").innerHTML = time;
       var someDate = new Date(time);
-      document.getElementById("time").innerHTML = someDate;
+      document.getElementById("btime").innerHTML = someDate;
       someDate = Math.floor(Number(someDate) / 1000);
       document.getElementById("time").innerHTML = someDate;
     }
