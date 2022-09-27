@@ -20,7 +20,7 @@
     function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
     }
-    function get_time(){
+    async function get_time(){
       url1=window.location.href
       if(url1.includes("ans")){return;}
       else{
