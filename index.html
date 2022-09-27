@@ -5,8 +5,6 @@
 </head>
 <body onload="get_time()">
   <h1 id="time"></h1>
-  <h1 id="gtime"></h1>
-  <h1 id="btime"></h1>
   <script>
     function GetURLParameter(sParam){
         var sPageURL = window.location.search.substring(1);
@@ -22,9 +20,7 @@
     }
     function get_time(){
       var time = GetURLParameter("time");
-      document.getElementById("gtime").innerHTML = time;
       var someDate = new Date(time);
-      document.getElementById("btime").innerHTML = someDate;
       someDate = Math.floor(Number(someDate) / 1000);
       document.getElementById("time").innerHTML = someDate;
     }
