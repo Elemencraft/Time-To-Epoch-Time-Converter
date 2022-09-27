@@ -19,7 +19,7 @@
     }
     function get_time(){
       url1=window.location.href
-      if(url1.includes("&ans")){}
+      if(url1.includes("ans")){return;}
       else{
           var time = GetURLParameter("time");
           var someDate = new Date(time);
