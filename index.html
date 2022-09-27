@@ -3,17 +3,16 @@
 <head>
 <title>Epoch Time Converter</title>
   <script>
+    function GetURLParameter(){
+        var data = window.location.href;
+        document.getElementById("url").innerHTML = data;
+    }
     function get_time(){
       var time = GetURLParameter();
       document.getElementById("gtime").innerHTML = time;
       var someDate = new Date(time);
       someDate = Math.floor(Number(someDate) / 1000);
       document.getElementById("time").innerHTML = someDate;
-    }
-    function GetURLParameter(sParam)
-    {
-        var data = window.location.href;
-        document.getElementById("url").innerHTML = data;
     }
   </script>
 </head>
