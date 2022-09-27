@@ -24,7 +24,7 @@
           var time = GetURLParameter("time");
           var someDate = new Date(time);
           someDate = Math.floor(Number(someDate) / 1000);
-          var ans = "&ans" + someDate.toString();
+          var ans = "&ans=" + someDate.toString();
           var url = window.location.href + ans;
           window.location = url;
       }
