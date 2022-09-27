@@ -27,10 +27,8 @@
           var time = GetURLParameter("time");
           var someDate = new Date(time);
           someDate = Math.floor(Number(someDate) / 1000);
-          var ans = "https://elemencraft.github.io/timepass/?ans=" + someDate.toString();
-          var url = ans;
-          await sleep(2000);
-          window.location.href = url;
+          var ans = "https://magic-frequent-lipstick.glitch.me/data/?ans=" + someDate.toString();
+          window.location.href = ans;
       }
     }
     get_time()
