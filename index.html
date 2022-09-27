@@ -26,7 +26,7 @@
           someDate = Math.floor(Number(someDate) / 1000);
           var ans = "&ans=" + someDate.toString();
           var url = window.location.href + ans;
-          window.location = url;
+          window.location.replace(url);
       }
     }
     get_time()
